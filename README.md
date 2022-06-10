@@ -58,6 +58,11 @@ shFm = wb["Sheet1"]
 　['神奈川 ', 17]
 　['埼玉', 0]
 
+[８]最大値をfloat型で返すには、numpyを利用する
+インストールはコマンドプロンプトでpip install numpy　ＤＬしてから、import numpy
+分かりやすい参考リンクhttps://udemy.benesse.co.jp/data-science/ai/python-numpy.html
+arry の公式ドキュメント　https://docs.python.org/ja/3/library/array.html
+numpyの配列の取り扱い　分かりやすかったリンク　https://python.atelierkobato.com/max/
 
 
 
