@@ -1,14 +1,10 @@
 #[3]シート「Sheet2」で、1～6月の残業時間が一番多い人の氏名をセルK4に、月名をセルL4に、残業時間の値をセルM4に記入するマクロを作りなさい。（ただし、残業時間が一番多い人はひとりしかいないものとしてよい）
-#一番得点の高い人はを重複させたデータ　40.5　二名　40.0　1名いるとする
+#一番得点の高い人を複数重複した値のデータとする
 #最大値が２つ以上あった場合を考慮し、最大値のインデックス番号をリストに格納する
 #最大値が何回目のループ回数か調べたいので、enumerate関数を使ってインデックスを抽出　#抽出したインデックス番号をlist.appned()メソッドで格納。appendメソッドつけ忘れて取り扱えないオブジェクトエラー注意
-
-#最大値をfloat型で返すには、numpyを利用する
 #インストールはコマンドプロンプトでpip install numpy　ＤＬしてから、import numpy 分かりやすい参考リンクhttps://udemy.benesse.co.jp/data-science/ai/python-numpy.html
-# arry の公式ドキュメント　https://docs.python.org/ja/3/library/array.html
-#numpyの配列の取り扱い　分かりやすかったリンク　https://python.atelierkobato.com/max/
+
 import openpyxl
-import numpy as np
 ph = "../5bai/ks012.xlsx"
 mod_ph = "../5bai/ks012_mod3.xlsx"
 wb = openpyxl.load_workbook(ph)
@@ -30,7 +26,7 @@ for row in sh["C6:H33"]:
 
 #最大値を変数に格納
 max_value = max(v_ls)
-print(max_value)    
+print(max_value)
 
 #残業時間表の中でmax関数の戻り値と一致したら、セルＫ４から書き出す
 #最大値が複数あったら全て書き出す
