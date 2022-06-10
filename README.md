@@ -3,6 +3,8 @@
 
 ■openpyxlの公式ドキュメント
 https://openpyxl.readthedocs.io/en/stable/
+
+■pypyのサイト
 https://pypi.org/project/openpyxl/
 
 [１]pipを使用してopenpyxlをインストール
