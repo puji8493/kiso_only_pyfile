@@ -1,14 +1,13 @@
-#[1]シート「mondai1」で、各行につき、「合計」の値が100を超えていたらA列に「○」そうでなければ「×」をつけるマクロを作りなさい
-#シート「mondai2」で、[1]～[3]と同様の作業をするマクロを作りなさいただし、「○」や「×」を記入する先は、J列とする
-
+#合計が100点超えたら〇、そうでないなら×を転記
+#＃100時間超えたフラグ判定の関数　returneで戻り値を返す
 # kiso01_judge.pyのover_time_judge関数を呼び出す工夫をした
 
 import openpyxl
 import kiso01_Judge
 from openpyxl.styles import Font
 
-wbPath = "../5bai/kiso001_kaito.xlsx"
-svPath = "../5bai/kiso001_kaito_mod_2.xlsx"
+wbPath = "../learning/kiso001_kaito.xlsx"
+svPath = "../learning/kiso001_kaito_mod_2.xlsx"
 wb = openpyxl.load_workbook(wbPath)
 ws = wb["Mondai2"]
 

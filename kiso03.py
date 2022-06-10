@@ -1,10 +1,9 @@
-#D列に記載された得点が80点以上だったら「A判定です」60点以上だったら「B判定です」40点以上だったら「C判定です」
-#それより下だったら「D判定です」と記載するマクロを作りなさい。
+#点数により判定を返す
 #関数hanteiで戻り値を返す
 import openpyxl
 
-ph = "../5bai/ks003_kaito.xlsx"
-mod_path = "../5bai/ks003_kaito_mod.xlsx"
+ph = "../learning/ks003_kaito.xlsx"
+mod_path = "../learning/ks003_kaito_mod.xlsx"
 
 wb = openpyxl.load_workbook(ph)
 sh = wb["Sheet1"]

@@ -1,9 +1,8 @@
-#No.002 - 問題
-#[1]昭和生まれ、平成生まれの各受講生について、西暦での生年を求めてG列に記入するマクロを作りなさい。
-#[2]男性の場合は80点以上、女性の場合は70点以上を合格とする。H列に、合否の結果を記入するマクロを作りなさい。
+#和暦を西暦にする
+#男性の場合は80点以上、女性の場合は70点以上を合格して、合否を書き出す
 import openpyxl
-fPath = ("../5bai/ks002.xlsx")
-mod_Path = ("../5bai/ks002_mod.xlsx")
+fPath = ("../learning/ks002.xlsx")
+mod_Path = ("../learning/ks002_mod.xlsx")
 wb = openpyxl.load_workbook(fPath)
 sh = wb["Sheet1"]
 

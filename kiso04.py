@@ -1,9 +1,7 @@
-#[1]シート「Sheet1」で、左の表で残業時間が100時間を超えている人の情報を、右の表に書きこむマクロを作りなさい
-#ただし、できあがりは、「Sheet2」にあるように、右の表で各データ間に隙間がないように作ること
-
+##100時間残業時間超過の人を要注意リストに格納して、書き出す
 import openpyxl
-ph = "../5bai/ks004.xlsx"
-mod_ph = "../5bai/ks004_mod.xlsx"
+ph = "../learning/ks004.xlsx"
+mod_ph = "../learning/ks004_mod.xlsx"
 wb = openpyxl.load_workbook(ph)
 sh = wb["Sheet1"]
 

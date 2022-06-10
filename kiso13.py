@@ -1,9 +1,8 @@
-#[1]シート「キャンペーン名簿」で、右の表のキャンペーン応募状況を元にして、
-# 左の表のC列に、どのIDの顧客がどのキャンペーンに応募したかを記入するマクロを作れ。完成型は、シート「完成形」のようになる。
+#キャンペーン名簿表を元に、転記リストと一致したものを書き出す
 #キャンペーン応募状況のIDは一意＝重複しないので、辞書でkey=ID value=キャンペーンタイプの値を取得する
 import openpyxl
-ph = "../5bai/ks013.xlsx"
-mod_ph = "../5bai/ks013_mod.xlsx"
+ph = "../learning/ks013.xlsx"
+mod_ph = "../learning/ks013_mod.xlsx"
 wb = openpyxl.load_workbook(ph)
 sh = wb["キャンペーン名簿"]
 

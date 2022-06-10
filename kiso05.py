@@ -1,9 +1,9 @@
-#[1]シート「元データ」にある表で残業時間が100時間を超えている人の情報を、シート「要注意リスト」に書きこむマクロを作りなさい
+#残業時間が100時間を超えているを要注意リストに格納して、書き出す
 
 import openpyxl
 
-ph = "../5bai/ks005.xlsx"
-mod_ph = "../5bai/ks005_mod.xlsx"
+ph = "../learning/ks005.xlsx"
+mod_ph = "../learning/ks005_mod.xlsx"
 #計算式をCellオブジェクトから取得したい時は、引数　data_only=Trueを追加する
 wb = openpyxl.load_workbook(ph,data_only=True)
 shFm = wb["元データ"]

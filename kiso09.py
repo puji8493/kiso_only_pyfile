@@ -1,10 +1,7 @@
-#[1]シート「問題1」のB列にある氏名を元にして、C列に苗字、D列に名前を記入するマクロを作りなさい
-#[2]シート「問題2」のB列にある氏名を元にして、C列に苗字、D列に名前を記入するマクロを作りなさい
-#[3]シート「問題3」のB列にある氏名を元にして、C列に苗字、D列に名前を記入するマクロを作りなさい
-
+#苗字と名前の間の文字列で分割して書き出す　split()メソッド
 import openpyxl
-ph = "../5bai/ks009.xlsx"
-mod_ph = "../5bai/ks009_mod2.xlsx"
+ph = "../learning/ks009.xlsx"
+mod_ph = "../learning/ks009_mod2.xlsx"
 wb = openpyxl.load_workbook(ph)
 sh1 = wb["問題１"]
 sh2 = wb["問題２"]

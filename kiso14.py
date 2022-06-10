@@ -1,8 +1,7 @@
-#[1]フリガナの文字列の長さが10文字を超える場合、J列に「フリガナが長すぎます」と表示するマクロを作りなさい。
-#[2]所属の文字列に「都島」を含むものについて、J列に「都島グループです」と表示するマクロを作りなさい。
+#フリガナ10文字だと”長すぎ" 所属部署に”都島”があると、それを表示する　リストのスライスにした
 import openpyxl
-ph = "../5bai/ks014.xlsx"
-mod_ph = "../5bai/ks014_mod.xlsx"
+ph = "../learning/ks014.xlsx"
+mod_ph = "../learning/ks014_mod.xlsx"
 wb = openpyxl.load_workbook(ph)
 sh = wb["IfThenEndIf"]
 
