@@ -61,7 +61,7 @@ shFm = wb["Sheet1"]
 [８]float型のリストをmax関数で返り値を取得した。(kiso012_1,kiso012_3)
 
 
-[９]float型で返す方法はnumpyを利用する(kiso012_2)
+[９]float型で返すnumpyを利用する(kiso012_2)
 インストールはコマンドプロンプトでpip install numpy　ＤＬしてから、import numpy
 分かりやすい参考リンクhttps://udemy.benesse.co.jp/data-science/ai/python-numpy.html
 arry の公式ドキュメント　https://docs.python.org/ja/3/library/array.html
