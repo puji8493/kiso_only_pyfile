@@ -48,7 +48,7 @@ shFm = wb["Sheet1"]
 　for row in sh["B5:C33"]:
   　  zangyo_list.append([row[0].value,row[1].value])
  　　
-  list.append([]) []でリストを囲むのをよく忘れるので注意
+  list.append([]) []でリストを囲むのをよく忘れるので注意 …自分向けのメモ
   
   以下のように複数の値をリストで保存したい場合は、.append([a,b])
     ['都市名', '数']
