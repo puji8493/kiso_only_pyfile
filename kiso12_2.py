@@ -46,8 +46,9 @@ print(ind_list)
 
 #最大値のインデックス番号をもつ残業リストを転記
 for c,v in enumerate(ind_list):
-    sh.cell(row=4+c,column=11).value= zangyo_list[v][0] #名前
-    sh.cell(row=4+c,column=12).value= zangyo_list[v][1] #時間
+    sh.cell(row=4+c,column=11).value = zangyo_list[v][0] #名前
+    sh.cell(row=4 + c, column=12).value = "１月"
+    sh.cell(row=4+c,column=13).value= zangyo_list[v][1] #時間
 
 
 wb.save(mod_ph)
