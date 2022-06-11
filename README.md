@@ -1,38 +1,33 @@
 # kiso_only_pyfile
 **基礎編ベーシックをopenpyxlで操作したpyfileだけ保存しました**
 
-[openpyxlの公式ドキュメント](https://openpyxl.readthedocs.io/en/stable/)
-[pypiのサイト](https://pypi.org/project/openpyxl/)
+公式ドキュメント
+<sub>[openpyxlの公式ドキュメント](https://openpyxl.readthedocs.io/en/stable/)</sub>
 
-[１]pipを使用してopenpyxlをインストール
-pipを用いたモジュールのインストールは、コマンドプロンプトで行う
-コマンドプロンプトに、py -m pip install openpyxlと入力してEnterキーを押す。
-「Successfully installed ・・ openpyxl・・」と表示されてインストール完了。
+<sub>[pypiのサイト](https://pypi.org/project/openpyxl/)</sub>
 
-[２]プログラムを書く時は、openpyxlモジュールをインポートする
-import openpyxl
+**pipを使用してopenpyxlをインストール**
 
-[３]ワークブックを開く
-openpyxl.load_workbook()関数 （）の引数に、開くファイルパスを指定
-wb = openpyxl.load_workbook("パス名")
+(1)pipを使用してopenpyxlをインストール  pipを用いたモジュールのインストールは、コマンドプロンプトで行う。  
+コマンドプロンプトに、py -m pip install openpyxlと入力してEnterキーを押す。  
+「Successfully installed ・・ openpyxl・・」と表示されてインストール完了。  
 
-[４]ワークブックを開く（計算式のあるファイル）
-計算式があるブックを開く場合、データ（文字）を読み込むため、SUM関数なら=SUM("A2:B3")など関数の文字がそのまま読み込まれる。
-計算式の数値を読み込みたいなら、openpyxl.load_workbook()の（）にdata_onlyというオプションをTrueにする。
-wb = openpyxl.load_workbook(xlsxファイルパス, data_only=True)
+(2)プログラムを書く時は、openpyxlモジュールをインポートする。  
+import openpyxl  
 
-[５]ワークシートの指定
-wb変数にシート名を入力
-shFm = wb["Sheet1"]
+**エクセル操作をする時のポイント**
 
-[６]繰返処理（セルのループ）
-・ワークシートを繰返（ループ）処理すると、全行を”１行ずつループ処理”
-・１行分のセルは”タプル”で取得される
-　ここから１つのセルを取得する場合、for文でインデックス毎の値を取り出せる
-
-　for row in ws["A1:D10"]:
+(1)エクセルシートの繰返（ループ）処理  
+・ワークシートを繰返（ループ）処理すると、全行を”１行ずつループ処理”します。
+１行分のセルは”タプル”で取得される 
+```
+for row in ws["A1:D10"]:
 　→（<cell.A1>,<cell.B1>,<cell.C1>,<cell.D1>)
    （<cell.A2>,<cell.B2>,<cell.C2>,<cell.D2>)
+```
+ 
+ ここから１つのセルを取得する場合、for文でインデックス毎の値を取り出せる
+
 　　
  １行の中のセルを取り扱う時は、row[0],row[1],row[3]と変数[インデックス番号]でオブジェクトを取得する
  値を変数に代入したいときは、row[0].valueと操作する
@@ -54,6 +49,21 @@ shFm = wb["Sheet1"]
 　['東京', 38.5]
 　['神奈川 ', 17]
 　['埼玉', 0]
+
+
+
+(3)ワークブックを開く  
+openpyxl.load_workbook()関数 （）の引数に、開くファイルパスを指定
+wb = openpyxl.load_workbook("パス名")
+
+[４]ワークブックを開く（計算式のあるファイル）
+計算式があるブックを開く場合、データ（文字）を読み込むため、SUM関数なら=SUM("A2:B3")など関数の文字がそのまま読み込まれる。
+計算式の数値を読み込みたいなら、openpyxl.load_workbook()の（）にdata_onlyというオプションをTrueにする。
+wb = openpyxl.load_workbook(xlsxファイルパス, data_only=True)
+
+[５]ワークシートの指定
+wb変数にシート名を入力
+shFm = wb["Sheet1"]
 
 [８]float型のリストをmax関数で返り値を取得した。(kiso012_1,kiso012_3)
 
