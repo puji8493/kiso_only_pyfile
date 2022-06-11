@@ -1,11 +1,8 @@
 # kiso_only_pyfile
 **基礎編ベーシックをopenpyxlで操作したpyfileだけ保存しました**
 
-■openpyxlの公式ドキュメント
-<sub>(https://openpyxl.readthedocs.io/en/stable/)</sub>
-
-■pypyのサイト
-https://pypi.org/project/openpyxl/
+[openpyxlの公式ドキュメント](https://openpyxl.readthedocs.io/en/stable/)
+[pypiのサイト](https://pypi.org/project/openpyxl/)
 
 [１]pipを使用してopenpyxlをインストール
 pipを用いたモジュールのインストールは、コマンドプロンプトで行う
