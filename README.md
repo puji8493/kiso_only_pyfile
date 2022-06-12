@@ -44,7 +44,7 @@ for row in ws["A1:D10"]:
          id_list.appned(c.value)
          print(id_list)
 ```
-printの実行結果は以下の通り(インデントを1段あげないでfor文の中で繰り返す)　　
+printの実行結果は以下の通り(インデントを1段あげないでfor文の中でprintを繰り返す)　　
 ```
 
 A列  B列　　	   C列　　　　D列  
