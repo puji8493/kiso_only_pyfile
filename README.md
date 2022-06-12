@@ -36,7 +36,7 @@ for row in ws["A1:D10"]:
     row[2].value・・・cell.C1  
     row[3].value・・・cell.D1
 ```
-(2)１行の値を、新規に空のリストに格納する時  
+(2)１行の中のセルの値を、１つずつリストに追加 
 ```
  for row in sh["A2:D10"]:＃行の指定をセルの番地で直接指定  
      zangyo_list = []#空のリスト  
