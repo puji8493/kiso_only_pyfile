@@ -99,7 +99,6 @@ def Hantei(overtime):
     return over
 ```
 
-```
 以下のようにリストに保存するとセルが保存されている
 rowの実行結果　(<Cell 'Mondai1'.B2>, <Cell 'Mondai1'.C2>)(<Cell 'Mondai1'.B3>, <Cell 'Mondai1'.C3>)  
 ```
