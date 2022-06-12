@@ -81,10 +81,21 @@ for row in ws["B2:C11"]:
 ```
 cnt = 2
 for c in lst_total:
-    ans = Hantei(c[1])#合計時間
+    ans = Hantei(c[1])#合計時間を判定する関数の戻り値を変数ansにいれる
     print(ans,c[0],c[1],sep=":")#引数　リスト[要素の番号]
     ws["A"+ str(cnt)].value = ans#セルの番地は文字列str関数で文字列に変換
     cnt = cnt + 1
+
+```
+#関数はリスト保存より上に書くこと
+def Hantei(overtime):
+    if overtime >= 100:
+        over = "〇"
+    else:
+        over = "×"
+    return over
+```
+
 ```
 以下のようにリストに保存するとセルが保存されている
 rowの実行結果　(<Cell 'Mondai1'.B2>, <Cell 'Mondai1'.C2>)(<Cell 'Mondai1'.B3>, <Cell 'Mondai1'.C3>)  
