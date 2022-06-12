@@ -40,7 +40,7 @@ row[3].value・・・cell.D1
  for row in sh["B5:C33"]:＃行の指定をセルの番地で直接指定  
      zangyo_list = []#空のリスト  
      for c in row:
-         zangyo_list.pttpne(c.value)
+         zangyo_list.appned(c.value)
          print(zangyo_list)
 ```
 
