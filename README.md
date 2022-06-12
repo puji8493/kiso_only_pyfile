@@ -44,7 +44,7 @@ for row in ws["A1:D10"]:
          zangyo_list.appned(c.value)
          print(zangyo_list)
 ```
-print順々に表示させると以下の通り
+printで順々に表示させると以下の通り
 ```
 A列  B列　　	   C列　　　　D列  
 1    東京研究所　　松本めぐみ  マツモト メグミ  
