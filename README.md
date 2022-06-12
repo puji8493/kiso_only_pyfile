@@ -40,10 +40,10 @@ for row in ws["A1:D10"]:
 (2)１行の中のセルの値を、１つずつリストに追加 
 ```
  for row in sh["A2:D10"]:＃行の指定をセルの番地で直接指定  
-     zangyo_list = []#空のリスト  
+     id_list = []#空のリスト  
      for c in row:
-         zangyo_list.appned(c.value)
-         print(zangyo_list)
+         id_list.appned(c.value)
+         print(id_list)
 ```
 printで順々に表示させると以下の通り
 ```
