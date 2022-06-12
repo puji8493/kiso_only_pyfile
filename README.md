@@ -112,6 +112,27 @@ for row in ws["B2:C11"]:
     ls.append(row)
     #print(row)
 ```
+
+リスト内包表記  
+ループ処理を１行に繋げて書くことができます。  
+
+全員の残業リストから、100時間以上の人を要注意リストに格納するとき、100時間以上の残業対象者をリスト内包表記でリストに格納する    
+```
+[仮変数を用いた式 for 仮変数 in イテラブルオブジェクト（反復可能なオブジェクト）if 条件式]  
+
+リスト内包表記  
+a_list = [t for t in zangyo_list if t[2]>=100]
+#print(a_list)
+
+for 文で書く  
+a_list = []
+for c in zangyo_list:
+    if c[2] >= 100:
+        a_list.append(c)
+
+for i in 1_list:
+    print(i)
+```
 (4)ワークブックを開く  
 openpyxl.load_workbook()関数  
 ()の引数に、開くファイルパスを指定  
