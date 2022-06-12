@@ -75,9 +75,11 @@ for row in ws["B2:C11"]:
     lst_total.append(lst)# インデントを一段あげる　ループをぬけたら、リストの要素0 ['米子 美和', 227] リストの要素１ ['呉 早希', 65]と保存
     #print(lst)
 ```
-名前、合計をセットにしたリストをfor文で調査、関数 def Hantei（引数：合計時間）を渡し、判定結果の戻り値をもらう
-書き出す行をcntのカウンターでカウントアップ　
-インデックス番号と値を取り出すenumerate関数もある。 for c,v in enumerate(lst_total):
+名前、合計をセットにしたリストをfor文で調査、関数 def Hantei（引数：合計時間）を渡し、判定結果の戻り値をもらう  
+書き出す行をcntのカウンターでカウントアップ  　
+インデックス番号と値を取り出すenumerate関数もある。  
+```
+for c,v in enumerate(lst_total): と入力すると、c インデックス番号、v　リストの値がとれる
 ```
 cnt = 2
 for c in lst_total:
