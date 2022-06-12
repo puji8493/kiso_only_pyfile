@@ -18,6 +18,8 @@ import openpyxl
 ```
 **エクセル操作をする時のポイント**  
 
+データ構造 (https://docs.python.org/ja/3/tutorial/datastructures.html#)  
+
 自分がエクセル操作をするときに、理解すればよいと思ったポイントです。  
 
 (1)エクセルシートの繰返（ループ）処理  
