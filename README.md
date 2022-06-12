@@ -79,6 +79,7 @@ for row in ws["B2:C11"]:
 書き出す行をcntのカウンターでカウントアップしているが、インデックス番号と値を取り出すenumerate関数もある。  
 ```
 for c,v in enumerate(lst_total): と入力すると、c インデックス番号、v　リストの値がとれる  
+enumerate関数で行番号を指定する場合は、sh.cell(row=c+2,column=5).value = ans　R1C1で記述するといいと思う。
 
 cnt = 2
 for c in lst_total:
