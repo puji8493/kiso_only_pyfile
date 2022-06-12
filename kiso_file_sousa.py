@@ -5,10 +5,10 @@ import os
 print(os.getcwd())
 
 #カレントディレクトリを変更する
-os.chdir("C:/Users/arupa/Documents/python/TestDir")
+os.chdir("C:/Users/●●/Documents/python/TestDir")
 print(os.getcwd())
 #元に戻す
-os.chdir("C:/Users/arupa/Documents/python/py_File")
+os.chdir("C:/Users/●●/Documents/python/py_File")
 print(os.getcwd())
 
 #カレントディレクトリ内のファイルを表示する
