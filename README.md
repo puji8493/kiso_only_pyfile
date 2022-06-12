@@ -87,7 +87,8 @@ for c in lst_total:
     cnt = cnt + 1
 
 ```
-#関数はリスト保存より上に書くこと
+関数はリスト保存より上に書くこと  
+```
 def Hantei(overtime):
     if overtime >= 100:
         over = "〇"
