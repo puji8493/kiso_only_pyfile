@@ -1,40 +1,44 @@
-#苗字と名前の間の文字列で分割して書き出す　split()メソッド
+#苗字と名前を split()メソッド　引数"/" もしくは"_"の文字列で分割したリストを作り、C/D列に書き出し　
+#sheets"問題3” 区切り文字は"/"と" "が混在
 import openpyxl
 ph = "../learning/ks009.xlsx"
-mod_ph = "../learning/ks009_mod2.xlsx"
+mod_ph = "../learning/ks009_mod3.xlsx"
 wb = openpyxl.load_workbook(ph)
-sh1 = wb["問題１"]
-sh2 = wb["問題２"]
 sh3 = wb["問題３"]
 
-#苗字と名前を split()メソッド　引数"/"で分割したリストを作り、C/D列に書き出し　
-for row in sh1.iter_rows(min_row=2,max_row=11):
-    namae = row[1].value
-    sp_list = []
-    sp_list = namae.split("/")
-    print(sp_list[0],sp_list[1],sep=":")
-    row[2].value = sp_list[0]
-    row[3].value = sp_list[1]
-
-#苗字と名前を split()メソッド　引数" "で分割したリストを作り、C/D列に書き出し　
-for row in sh2.iter_rows(min_row=2,max_row=11):
-    namae = row[1].value
-    sp_list = []
-    sp_list = namae.split(" ")
-    print(sp_list[0],sp_list[1],sep=":")
-    row[2].value = sp_list[0]
-    row[3].value = sp_list[1]
-
-#苗字と名前を split()メソッド　引数"/" " " で分割したリストを作り、C/D列に書き出し　
-for row in sh3.iter_rows(min_row=2,max_row=11):
-    namae = row[1].value
+def get_first_last_name(namae):
     sp_list = []
     if "/" in namae:
-        st = "/"
-    else:
-        st = " "
-    sp_list = namae.split(st)
-    row[2].value = sp_list[0]
-    row[3].value = sp_list[1]
+        sp_list = namae.split("/")
+    elif " " in namae:
+        sp_list = namae.split(" ")
+
+    return sp_list
+    #print(sp_list[0],sp_list[1],sep=":")
+
+#名簿全員のリストを格納　（1列のみ）
+members_list = []
+for row in sh3.iter_rows(min_row=2,max_row=11,min_col=2,max_col=2):
+    #行の空リスト
+    ls = []
+    #行の要素の値をmembers_listに格納
+    for r in row:
+        ls.append(r.value)
+    members_list.append(ls)
+
+#名前を文字列から苗字・氏名をsplitメソッドで分割する関数に渡し、戻り値を所定のセルに書き出す
+#シートに書き出す行番号のカウンターcnt
+cnt = 2
+for c in members_list:
+    #名前の変数をmembers_list[0]に格納する
+    namae = c[0]
+    #関数に名前の変数を渡し、bufという変数名のリスト格納する
+    buf = []
+    buf = get_first_last_name(namae)
+    #split関数の戻り値のタイプはリスト
+    print(type(buf),buf[0],buf[1],sep=":")
+    sh3.cell(row=cnt,column=3).value = buf[0]
+    sh3.cell(row=cnt,column=4).value = buf[1]
+    cnt = cnt +1
 
 wb.save(mod_ph)
