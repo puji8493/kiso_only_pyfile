@@ -37,12 +37,19 @@ row[3].value・・・cell.D1
 (2)１行の値を、新規に空のリストに格納する時  
 1行の中の複数の値を１つのリストで格納したいとき
 ```
- for row in sh["B5:C33"]:＃行の指定をセルの番地で直接指定  
+ for row in sh["A2:D10"]:＃行の指定をセルの番地で直接指定  
      zangyo_list = []#空のリスト  
      for c in row:
          zangyo_list.appned(c.value)
          print(zangyo_list)
 ```
+A列 	B列　　	 	C列　　　　　D列  
+1		東京研究所　　松本めぐみ  マツモト メグミ  
+printでループさせると以下の通り  
+[1]  
+[1, '東京研究所']  
+[1, '東京研究所', '松本 めぐみ']  
+[1, '東京研究所', '松本 めぐみ', 'マツモト メグミ'] 
 
 (3)ワークブックを開く  
 openpyxl.load_workbook()関数  
