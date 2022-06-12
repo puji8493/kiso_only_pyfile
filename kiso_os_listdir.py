@@ -15,8 +15,8 @@ for c in lst:
 #"kiso”のファイル名を書き出すテキストファイルパス
 save_ph = Path("../learning/dir_output.txt")
 
-#テキストファイルへ保存 モードは"w"　書き込み 改行するには、".\n"”
+#テキストファイルへ保存 モードは"w"　書き込み 改行するには、"\n"”
 with save_ph.open(mode="w") as f:
     for c in lst:
-        gyo = c + ".\n"
+        gyo = c + "\n"
         f.write(gyo)
