@@ -14,12 +14,20 @@ for row in sh["E11:F22"]:
 
 #Ａ列のＩＤと、キャンペン応募状況の辞書のkey(ID)が一致したらＣ列に書き出す
 #辞書の値と一致、セルへ書き出したらbreak文でfor文を抜ける
-for r in sh["A4:C29"]:
-    idx = r[0].value
+
+kokyaku_list = []
+for row in sh.iter_rows(min_row=4,max_row=29,max_col=2):
+    ls = []
+    for r in row:
+        ls.append(r.value)
+    kokyaku_list.append(ls)
+
+for c,val in kokyaku_list:
+    print(c,val,c,sep=":")
     for k,v in dic.items():
-        if idx == k:
-            print(k,v)
-            r[2].value = v
+        if c == k:
+            print(k,v,c)
+            sh.cell(row=c+3,column=3).value = v
             break
 
 wb.save(mod_ph)
