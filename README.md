@@ -3,9 +3,8 @@
 
 **公式ドキュメント**  
 
-<sub>[openpyxlの公式ドキュメント](https://openpyxl.readthedocs.io/en/stable/)</sub>
-
-<sub>[pypiのサイト](https://pypi.org/project/openpyxl/)</sub>
+<sub>[openpyxlの公式ドキュメント](https://openpyxl.readthedocs.io/en/stable/)</sub>  
+<sub>[pypiのサイト](https://pypi.org/project/openpyxl/)</sub>  
 
 **pipを使用してopenpyxlをインストール**
 
