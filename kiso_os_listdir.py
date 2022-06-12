@@ -8,10 +8,6 @@ print(os.listdir())
 #カレントディレクトリのテキストファイルの最初の文字が"kiso”だったら、リストに格納
 lst = [t for t in os.listdir() if t.startswith("kiso")]
 
-#"kiso"から始まるリストだけ書き出されているか
-for c in lst:
-    print(c)
-
 #"kiso”のファイル名を書き出すテキストファイルパス
 save_ph = Path("../learning/dir_output.txt")
 
@@ -20,3 +16,9 @@ with save_ph.open(mode="w") as f:
     for c in lst:
         gyo = c + "\n"
         f.write(gyo)
+
+#再度読み込んでアウトプットしてみる
+open_ph =  Path("../learning/dir_output.txt")
+with open_ph.open() as f:
+    gyo = f.read()
+    print(gyo)
