@@ -8,9 +8,11 @@
 
 **pipを使用してopenpyxlをインストール**
 
-(1)pipを使用してopenpyxlをインストール  pipを用いたモジュールのインストールは、コマンドプロンプトで行います。   
+(1)windowの場合  
+pipを使用してopenpyxlをインストール  pipを用いたモジュールのインストールは、コマンドプロンプトで行います。   
 コマンドプロンプトに、py -m pip install openpyxlと入力してEnterキーを押す。  
 「Successfully installed ・・ openpyxl・・」と表示されてインストール完了。  
+
 
 (2)プログラムを書く時は、openpyxlモジュールをインポートする。  
 ```
