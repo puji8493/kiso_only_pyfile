@@ -42,7 +42,7 @@ for row in ws["A1:D10"]:
      id_list = []#空のリスト  
      for c in row:
          id_list.appned(c.value)
-         print(id_list)
+         print(id_list)#インデントを1段あげないでfor文の中で繰り返す
 ```
 printの実行結果は以下の通り  
 ```
