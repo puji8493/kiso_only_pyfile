@@ -65,7 +65,7 @@ wb = openpyxl.load_workbook("パス名")
 wb = openpyxl.load_workbook(xlsxファイルパス, data_only=True)  
 
 (5)ワークシートの指定  
-wb変数にシート名を入力  
+wb変数にシート名を入力。エクセルVBAの経験があれば、シートやセルの指定は何ら問題ないかと思います。  
 ```
 shFm = wb["Sheet1"]
 ```
