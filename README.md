@@ -42,9 +42,10 @@ row[3].value・・・cell.D1
          zangyo_list.appned(c.value)
          print(zangyo_list)
 ```
+printでループさせると以下の通り
 A列 	B列　　	 	C列　　　　　D列  
 1		東京研究所　　松本めぐみ  マツモト メグミ  
-printでループさせると以下の通り  
+(実行結果)    
 [1]  
 [1, '東京研究所']  
 [1, '東京研究所', '松本 めぐみ']  
