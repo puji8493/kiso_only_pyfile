@@ -175,4 +175,4 @@ np.namax
 os.getcwd  
 os.listdir()  
 Path関数  
-textへの書き込みopen関数  
+textへの書き込みopenメソッド  
