@@ -25,7 +25,7 @@ with output_path.open(mode="w") as f:
 ls = []
 for c in os.listdir():
     if "kiso" in c:
-        gyo = c + ".\n"
+        gyo = c + "\n"
         ls.append(gyo)
 
 '''
