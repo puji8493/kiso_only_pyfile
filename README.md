@@ -40,11 +40,8 @@ row[3].value・・・cell.D1
  for row in sh["B5:C33"]:＃行の指定をセルの番地で直接指定  
      zangyo_list = []#空のリスト  
      for c in row:
-```
- zangyo_list = []#空のリスト  
- for row in sh["B5:C33"]:＃行の指定をセルの番地で直接指定  
-  　  zangyo_list.append([row[0].value,row[1].value])  
-     #B列とC列の値をzangyo_list(リスト)の要素として追加  
+         zangyo_list.pttpne(c.value)
+         print(zangyo_list)
 ```
 
 (3)ワークブックを開く  
