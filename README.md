@@ -42,9 +42,9 @@ for row in ws["A1:D10"]:
      id_list = []#空のリスト  
      for c in row:
          id_list.appned(c.value)
-         print(id_list)#インデントを1段あげないでfor文の中で繰り返す
+         print(id_list)
 ```
-printの実行結果は以下の通り  
+printの実行結果は以下の通り(インデントを1段あげないでfor文の中で繰り返す)　　
 ```
 
 A列  B列　　	   C列　　　　D列  
