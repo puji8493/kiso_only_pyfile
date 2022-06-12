@@ -57,13 +57,15 @@ A列  B列　　	   C列　　　　D列
 (3)ワークブックを開く  
 openpyxl.load_workbook()関数  
 ()の引数に、開くファイルパスを指定  
+```
 wb = openpyxl.load_workbook("パス名")  
-
+```
 (4)ワークブックを開く（計算式のあるファイル）  
 計算式があるブックを開く場合、データ（文字）を読み込むため、SUM関数なら=SUM("A2:B3")など関数の文字がそのまま読み込まれてしまいます。  
 計算式の数値を読み込みたいなら、openpyxl.load_workbook()の（）にdata_onlyというオプションをTrueにすればOKです。  
+```
 wb = openpyxl.load_workbook(xlsxファイルパス, data_only=True)  
-
+```
 (5)ワークシートの指定  
 wb変数にシート名を入力。エクセルVBAの経験があれば、シートやセルの指定は何ら問題ないかと思います。  
 ```
