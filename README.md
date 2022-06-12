@@ -130,7 +130,7 @@ for c in zangyo_list:
     if c[2] >= 100:
         a_list.append(c)
 
-for i in 1_list:
+for i in a_list:
     print(i)
 ```
 (4)ワークブックを開く  
