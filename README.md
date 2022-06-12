@@ -157,3 +157,22 @@ wb変数にシート名を入力。エクセルVBAの経験があれば、シー
 ```
 shFm = wb["Sheet1"]
 ```
+以下の練習は完了  
+if_else  
+def  
+for  
+iter_rows  
+enumerate  
+リスト内包表記  
+split  
+in   
+辞書  
+辞書get()メソッド  
+辞書のitems()メソッドでキーと値の両方を取り出す  
+max関数  
+numpy  
+np.namax  
+os.getcwd  
+os.listdir()  
+Path関数  
+textへの書き込みopen関数  
