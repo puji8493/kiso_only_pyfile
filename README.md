@@ -40,7 +40,7 @@ row[3]・・・cell.D1
  zangyo_list = []#空のリスト  
  for row in sh["B5:C33"]:＃行の指定をセルの番地で直接指定  
   　  zangyo_list.append([row[0].value,row[1].value])  
-     #B列とC列の値を残業リストの要素として追加  
+     #B列とC列の値をzangyo_list(リスト)の要素として追加  
 ```
 
 (3)ワークブックを開く  
