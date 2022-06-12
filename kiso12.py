@@ -26,7 +26,7 @@ max_gyo_list = []
 for c,v in enumerate(tokuten_list):
     if max_value == v:
         max_gyo_list.append(c)
-        print(max_gyo_list,"max",sep=":")
+        #print(max_gyo_list,"max",sep=":")
 
 #最高点のリストの行に、”最高点です”とフラグをたてる
 for i in max_gyo_list:
