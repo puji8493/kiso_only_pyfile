@@ -28,10 +28,10 @@ for row in ws["A1:D10"]:
    （<cell.A2>,<cell.B2>,<cell.C2>,<cell.D2>)
 ```
 ここから１つのセルを取得する場合、リスト同様にfor文でインデックス毎の値を取り出す  
-row[0]・・・cell.A1  
-row[1]・・・cell.B1  
-row[2]・・・cell.C1  
-row[3]・・・cell.D1
+row[0].value・・・cell.A1  
+row[1].value・・・cell.B1  
+row[2].value・・・cell.C1  
+row[3].value・・・cell.D1
 と変数[インデックス番号]でセルのオブジェクトを取得します。  
 
 (2)１行の値を、新規に空のリストに格納する時  
