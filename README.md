@@ -124,7 +124,14 @@ for row in ws["B2:C11"]:
 a_list = [t for t in zangyo_list if t[2]>=100]
 #print(a_list)
 
-for 文で書く  
+あとは、a_listに入れた要注意リストを書き出せばOK
+for c,v in enumerate(a_list):
+    #要注意リストの要素を書き出す　v[0]=ID　v[1]=名前 v[2]=合計  
+    sh.cell(row=5+c,column=6).value = v[0]
+    sh.cell(row=5+c,column=7).value = v[1]
+    sh.cell(row=5+c,column=8).value = v[2]
+
+for 文で書く場合は、まずa_listを以下のように保存する
 a_list = []
 for c in zangyo_list:
     if c[2] >= 100:
