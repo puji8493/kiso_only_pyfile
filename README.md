@@ -66,9 +66,9 @@ A列  B列　　	   C列　　　　D列
 ```
 リストに保存する　row(1行分）をさらにfor文でまわして、ループをぬけたときの実行結果  
 ```
-lst_total = []
+lst_total = []#1行ごとの値を入れる変数　最初に空リストをつくっておく
 for row in ws["B2:C11"]:
-    lst = []#空リスト
+    lst = []#行を入れる空リスト
     for r in row:
         lst.append(r.value)
     lst_total.append(lst)
