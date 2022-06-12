@@ -40,7 +40,7 @@ for row in sh.iter_rows(min_row=2,max_row=11,min_col=1,max_col=6):
 #row_listリストの値を書き出す enumerate関数でリストのインデックス番号を取得、書き出すセルの行番地の変数に代入する
 #行の開始行は２行目のため、c + 2 と２を加算する
 for c,v in enumerate(row_list):
-    #v[4]成年元号とv[5]成年の値を関数trans_seirekiの引数として渡す
+    #v[4]生年元号とv[5]生年の値を関数trans_seirekiの引数として渡す
     seireki = trans_seireki(v[4],v[5])
     #v[2]性別とv[3]得点を、関数hanteiの引数として渡す
     gouhi_hantei = hantei(v[2],v[3])
