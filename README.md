@@ -79,8 +79,8 @@ for row in ws["B2:C11"]:
 名前、合計をセットにしたリストをfor文で調査、関数 def Hantei（引数：合計時間）を渡し、判定結果の戻り値をもらう  
 書き出す行をcntのカウンターでカウントアップしているが、インデックス番号と値を取り出すenumerate関数もある。  
 ```
-for c,v in enumerate(lst_total): と入力すると、c インデックス番号、v　リストの値がとれる
-```
+for c,v in enumerate(lst_total): と入力すると、c インデックス番号、v　リストの値がとれる  
+
 cnt = 2
 for c in lst_total:
     ans = Hantei(c[1])#合計時間を判定する関数の戻り値を変数ansにいれる
