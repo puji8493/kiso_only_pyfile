@@ -1,7 +1,6 @@
 # kiso_only_pyfile
 **基礎編ベーシックをopenpyxlで操作したpyfileだけ保存しました**
 
-公式ドキュメント
 <sub>[openpyxlの公式ドキュメント](https://openpyxl.readthedocs.io/en/stable/)</sub>
 
 <sub>[pypiのサイト](https://pypi.org/project/openpyxl/)</sub>
