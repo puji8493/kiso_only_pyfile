@@ -9,15 +9,10 @@ from pathlib import Path
 csv_path = Path("../learning/z1_1_01.csv")
 print(csv_path.is_file())
 
+#行番号はreader.line_numで先頭に行数を表示
 with csv_path.open(encoding="cp932") as f:
     #cCSVファイルの読み込み（入力）にはcsv.readerクラスを使う。
     # 第一引数にopen()で開いたファイルオブジェクト＝fを指定
-    reader = csv.reader(f)
-    for row in reader:
-        print(row)
-
-#行番号はreader.line_numで先頭に行数を表示
-with csv_path.open(encoding="cp932") as f:
     reader = csv.reader(f)
     for row in reader:
         # csvreader.line_num ソースイテレータから読んだ行数です。この数は返されるレコードの数とは、レコードが複数行に亘ることがあるので、一致しません。
@@ -27,13 +22,11 @@ with csv_path.open(encoding="cp932") as f:
         print(row)
         print(row[0],row[3],sep="☆")
 
+#もう一度csvを読み込んで、3行目以降をリストに格納する
 ls = []
 with csv_path.open(encoding="cp932") as f:
     reader = csv.reader(f)
-    for row in reader:
-        if reader.line_num < 3:
-            continue
-        ls.append(row)
+    ls = [row for row in reader if reader.line_num >=3]
 
 #書き込み用のパス
 write_path = Path("../learning/output_z1.csv")
