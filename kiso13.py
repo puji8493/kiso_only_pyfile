@@ -2,7 +2,7 @@
 #キャンペーン応募状況のIDは一意＝重複しないので、辞書でkey=ID value=キャンペーンタイプの値を取得する
 import openpyxl
 ph = "../learning/ks013.xlsx"
-mod_ph = "../learning/ks013_mod.xlsx"
+mod_ph = "../learning/ks013_mod_2.xlsx"
 wb = openpyxl.load_workbook(ph)
 sh = wb["キャンペーン名簿"]
 
@@ -21,13 +21,14 @@ for row in sh.iter_rows(min_row=4,max_row=29,max_col=2):
     for r in row:
         ls.append(r.value)
     kokyaku_list.append(ls)
+    print(kokyaku_list)
 
-for c,val in kokyaku_list:
-    print(c,val,c,sep=":")
+for c,val in enumerate(kokyaku_list):
+    print(c,val,sep=":")
     for k,v in dic.items():
-        if c == k:
-            print(k,v,c)
-            sh.cell(row=c+3,column=3).value = v
+        if val[0] == k:
+            #print(k,v,c)
+            sh.cell(row=c+4,column=3).value = v
             break
 
 wb.save(mod_ph)
