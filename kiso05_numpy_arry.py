@@ -45,13 +45,8 @@ print(arr_data)
 print(sum(arr_data))
 #[ 281.5  170.   196.   164.   179.5  150.5 1141.5]
 
-for row in range(len(sum(arr_data))):
-        print(sum(arr_data)[row])
-        # エクセルに転記　できなかった　ValueError: Cannot convert array([ 40. ,  28. ,  40. ,  30. ,  30. ,  28.5, 196.5]) to Excel
-        val = arr_data[row]
-        #sh.cell(row=14,column=col).value = val
-        #col= col + 1
-
+print(len(sum(arr_data)))
+#7
 '''
 print(sum(arr_data))の実行結果
 [ 281.5  170.   196.   164.   179.5  150.5 1141.5]
