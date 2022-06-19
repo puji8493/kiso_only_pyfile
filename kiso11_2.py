@@ -3,7 +3,7 @@
 
 import openpyxl
 ph = "../learning/ks011.xlsx"
-mod_ph = "../learning/ks011_mod_dic2.xlsx"
+mod_ph = "../learning/ks011_mod_dic2_2.xlsx"
 wb = openpyxl.load_workbook(ph)
 sh = wb["Sheet1"]
 
@@ -49,6 +49,9 @@ for c,i in enumerate(souran_list):
             pay_thismonth = pay_thismonth + sh.cell(row=c+4,column=4).value
             pay_total = pay_total + sh.cell(row=c+4,column=5).value
             break
+        else:
+            print("不要なループ")
+            continue
 
 sh["D10"].value = pay_thismonth
 sh["E10"].value = pay_total
