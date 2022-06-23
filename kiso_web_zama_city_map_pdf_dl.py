@@ -1,4 +1,4 @@
-#座間市HP ハザードマップPDFをDL href要素のテキスト表示部分を抜き出して保存
+#座間市HP ハザードマップPDFをDL href要素のテキスト表示部分を抜き出してpdfファイル名として保存
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
